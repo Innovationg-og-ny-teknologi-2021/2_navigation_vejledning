@@ -1,8 +1,7 @@
 # Øvelsesvejledning til øvelse 2 - navigation
 
 #### Slut resultat
-![5ihkps](https://user-images.githubusercontent.com/55731954/128075138-98c87da9-0574-443d-9926-f89c22e4000a.gif)
-
+HER SKAL DER INDSÆTTES EN gif
 
 ## Del 1 - Tab Navigator
 

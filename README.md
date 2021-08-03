@@ -1,5 +1,9 @@
 # Øvelsesvejledning til øvelse 2 - navigation
 
+#### Slut resultat
+![5ihkps](https://user-images.githubusercontent.com/55731954/128075138-98c87da9-0574-443d-9926-f89c22e4000a.gif)
+
+
 ## Del 1 - Tab Navigator
 
 1. Start med at oprette et nyt projekt.
@@ -81,11 +85,15 @@
 
 ### Bilag A - Package.json - Fra Endelig Løsning 
 
-![img.png](img.png)
+![img](https://user-images.githubusercontent.com/55731954/128073224-323544b0-0579-4e71-a6a9-c7ac6367a592.png)
 
-<h3>Bilag B - Bottom Tab struktur </h3>
+### Bilag B - Bottom Tab struktur 
 
-![img_1.png](img_1.png)![img.png](img.png)
+![img_1](https://user-images.githubusercontent.com/55731954/128073347-2d5699e3-c082-4d43-b96a-26503a07376d.png)
+
+### Bilag C - Mappestruktur med stackcomponents
+<img width="421" alt="asasdUdklip" src="https://user-images.githubusercontent.com/55731954/128073571-187b08bf-883a-4ffa-ac94-bcd2f6234f9b.PNG">
+![5ihkps](https://user-images.githubusercontent.com/55731954/128075112-08c88318-188d-485d-898f-bf5cca6c9ebd.gif)
 
 
 

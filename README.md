@@ -70,7 +70,7 @@ HER SKAL DER INDSÆTTES EN gif
  14. I `return()` oprettes to `<Button/>` - ligesom i  `DetailsScreen`.
  15. Den ene `<Button/>` skal i onPress aktivere `navigation.goBack` - Dette er en tilbage-knap
  16. Den anden `<Button/>`  skal kalde `navigation.navigate(<--Rutenavnet på den anden screen i stackComponents-->)`
- 17. Nu er øvelse færdig og du er klar til at prøve app'en. Start din app op og forsøg at trykke på Details, som refererer til den nyoprettede `Stacknavigator`. I denne screen kan du se to knapper, der giver dig mulighed for at navigere ind til de to screens i stackComponents-mappen.     
+ 17. Nu er øvelse færdig og du er klar til at prøve appen. Start din app op og forsøg at trykke på Details, som refererer til den nyoprettede `Stacknavigator`. I denne screen kan du se to knapper, der giver dig mulighed for at navigere ind til de to screens i stackComponents-mappen.     
  
 ## Videre arbejde - Inspiration
  - Placer ikoner på alle tabs

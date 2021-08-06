@@ -1,7 +1,8 @@
+
 # Øvelsesvejledning til øvelse 2 - navigation
 
 #### Slut resultat
-HER SKAL DER INDSÆTTES EN gif
+https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-8e5a-4e091a5c1c48.mp4
 
 ## Del 1 - Tab Navigator
 

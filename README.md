@@ -27,6 +27,7 @@ https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-
             expo install @react-navigation/bottom-tabs @react-navigation/bottom-tabs @react-navigation/native @react-navigation/stack react-native-gesture-handler react-native-safe-area-context react-native-screens react-native-vector-icons
 
 
+2. B Test nu om react navigation virker med at kopier al koden ind fra https://reactnavigation.org/docs/tab-based-navigation/ ( Minimal example of tab-based navigation)
 
 3. Opret en mappe og døb denne 'components' 
 
@@ -115,23 +116,8 @@ https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-
 ### fejl og løsninger 
 
 løsninger til double views
-`
-  "dependencies": {
-    "@react-navigation/bottom-tabs": "^5.11.11",
-    "@react-navigation/native": "^5.9.4",
-    "@react-navigation/stack": "^5.14.5",
-    "expo": "^42.0.3",
-    "expo-status-bar": "~1.0.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
-    "react-native-gesture-handler": "^1.10.3",
-    "react-native-safe-area-context": "^3.2.0",
-    "react-native-screens": "^3.4.0",
-    "react-native-vector-icons": "^8.1.0",
-    "react-native-web": "~0.13.12"
-  },
-`
+
+
 
 
 

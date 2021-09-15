@@ -115,7 +115,7 @@ https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-
 ### fejl og løsninger 
 
 løsninger til double views
-
+`
   "dependencies": {
     "@react-navigation/bottom-tabs": "^5.11.11",
     "@react-navigation/native": "^5.9.4",
@@ -131,7 +131,7 @@ løsninger til double views
     "react-native-vector-icons": "^8.1.0",
     "react-native-web": "~0.13.12"
   },
-
+`
 
 
 

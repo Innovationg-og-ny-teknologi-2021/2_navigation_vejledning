@@ -24,7 +24,7 @@ https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-
     </ul>
 
     
-            expo install --save @react-navigation/bottom-tabs @react-navigation/bottom-tabs @react-navigation/native @react-navigation/stack react-native-gesture-handler react-native-safe-area-context react-native-screens react-native-vector-icons
+            expo install @react-navigation/bottom-tabs @react-navigation/bottom-tabs @react-navigation/native @react-navigation/stack react-native-gesture-handler react-native-safe-area-context react-native-screens react-native-vector-icons
 
 
 

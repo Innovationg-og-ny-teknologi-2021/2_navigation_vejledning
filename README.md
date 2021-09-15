@@ -27,7 +27,7 @@ https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-
             expo install @react-navigation/bottom-tabs @react-navigation/bottom-tabs @react-navigation/native @react-navigation/stack react-native-gesture-handler react-native-safe-area-context react-native-screens react-native-vector-icons
 
 
-2. B Test nu om react navigation virker med at kopier al koden ind fra https://reactnavigation.org/docs/tab-based-navigation/ ( Minimal example of tab-based navigation)
+2. Test nu om react navigation virker ved at kopiere al koden ind fra https://reactnavigation.org/docs/tab-based-navigation/ ( Minimal example of tab-based navigation)
 
 3. Opret en mappe og døb denne 'components' 
 

@@ -126,7 +126,7 @@ export default function App() {
         </View>
     );
 }
-`
+```
 ### fejl og løsninger 
 
 løsninger til double views

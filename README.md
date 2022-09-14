@@ -101,7 +101,7 @@ https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-
 ## Bilag
 
 
-### Bilag A - Package.json - Fra Endelig Løsning 
+### Bilag A - Package.json - Fra Endelig Løsning OBS!! Jeres versioner er helt sikkert mere opdateret (hvilke er ok)!! 
 
 ![img](https://user-images.githubusercontent.com/55731954/128073224-323544b0-0579-4e71-a6a9-c7ac6367a592.png)
 

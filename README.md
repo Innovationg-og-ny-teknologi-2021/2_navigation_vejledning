@@ -7,7 +7,7 @@ https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-
 ## Del 1 - Tab Navigator
 
 1. Start med at oprette et nyt projekt.
-    - `expo init <--angiv navnet på øvelsen-->` eller `npx create-expo-app my-app` (den nye måde)
+    - `expo init <--angiv navnet på øvelsen-->` eller `npx create-expo-app <--angiv navnet på øvelsen-->` (den nye måde)
 2. Installér følgende dependencies;
 <ul>
     <li>@react-navigation/bottom-tabs</li>

@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-
     <li>react-native-screens</li>
     <li>react-native-vector-icons</li>
             <ul><li>Et skærmklip af package.json filen fra den endelige løsning er vedlagt i bilag A.
-                Din package.json bør være ens med denne efter installeringen. </li>
+                Din package.json bør være ens med denne efter installeringen, men med nyere versioner. </li>
             <li>KOPIER linjen herunder til installering;</li>
                 </ul>
     </ul>

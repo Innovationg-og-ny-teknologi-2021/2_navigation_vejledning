@@ -7,8 +7,11 @@ https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-
 ## Del 1 - Tab Navigator
 
 1. Start med at oprette et nyt projekt.
-    - `expo init <--angiv navnet på øvelsen-->` eller `npx create-expo-app <--angiv navnet på øvelsen-->` (den nye måde)
-2. Installér følgende dependencies;
+    - `npx create-expo-app <--angiv navnet på øvelsen/projektet-->`
+
+2. Navigere i din terminal til din projekt-mappe med `cd..` osv.
+
+3. Installér følgende dependencies;
 <ul>
     <li>@react-navigation/bottom-tabs</li>
     <li>@react-navigation/native</li>
@@ -18,13 +21,13 @@ https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-
     <li>react-native-screens</li>
     <li>react-native-vector-icons</li>
             <ul><li>Et skærmklip af package.json filen fra den endelige løsning er vedlagt i bilag A.
-                Din package.json bør være ens med denne efter installeringen, men med nyere versioner. </li>
+                Din package.json bør være ens med denne efter installeringen. </li>
             <li>KOPIER linjen herunder til installering;</li>
                 </ul>
     </ul>
 
     
-            expo install @react-navigation/bottom-tabs @react-navigation/bottom-tabs @react-navigation/native @react-navigation/stack react-native-gesture-handler react-native-safe-area-context react-native-screens react-native-vector-icons
+            npm install @react-navigation/bottom-tabs @react-navigation/bottom-tabs @react-navigation/native @react-navigation/stack react-native-gesture-handler react-native-safe-area-context react-native-screens react-native-vector-icons
 
 
 2. Test nu om react navigation virker ved at kopiere al koden ind i App.js fra https://reactnavigation.org/docs/tab-based-navigation/ ( Minimal example of tab-based navigation)
@@ -101,7 +104,7 @@ https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-
 ## Bilag
 
 
-### Bilag A - Package.json - Fra Endelig Løsning OBS!! - Jeres versioner er helt sikkert mere opdateret (hvilke er ok)!! 
+### Bilag A - Package.json - Fra Endelig Løsning 
 
 ![img](https://user-images.githubusercontent.com/55731954/128073224-323544b0-0579-4e71-a6a9-c7ac6367a592.png)
 

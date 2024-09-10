@@ -1,140 +1,208 @@
+# Navigation | (• ◡•)| (❍ᴥ❍ʋ)
 
-# Øvelsesvejledning til øvelse 2 - navigation
+## Del 1 - Opret projekt & fil struktur
 
-#### Slut resultat
-https://user-images.githubusercontent.com/48329669/128568851-fd03d971-4813-48d7-8e5a-4e091a5c1c48.mp4
+1. Start med at navigere til en mappe og oprette en ny projekt med terminalen
+```
+npx create-expo-app --template blank 02_Navitation
+```
+*Husk at navigere indtil projektet med `cd 02_Navitation`*
 
-## Del 1 - Tab Navigator
+2. Oprette fil strukturen:
+* Mappe kald "components"
+* Mappe kald "screens"
+* Ind i screens mappen: Mappe kald "StackScreens"
 
-1. Start med at oprette et nyt projekt.
-    - `npx create-expo-app <--angiv navnet på øvelsen/projektet-->`
+3. Læs dokumentationen og Installér de dependencies som vi skal bruge:
+* https://reactnavigation.org/docs/getting-started
 
-2. Navigere i din terminal til din projekt-mappe med `cd..` osv.
+4. Test om det hele virker ved at kopiere dette minimal example ind i jeres App.js - https://reactnavigation.org/docs/tab-based-navigation/#minimal-example-of-tab-based-navigation. Hvis det virker, så forsæt (ﾉ^_^)ﾉ
 
-3. Installér følgende dependencies;
-<ul>
-    <li>@react-navigation/bottom-tabs</li>
-    <li>@react-navigation/native</li>
-    <li>@react-navigation/stack</li>
-    <li>react-native-gesture-handler</li>
-    <li>react-native-safe-area-context</li>
-    <li>react-native-screens</li>
-    <li>react-native-vector-icons</li>
-            <ul><li>Et skærmklip af package.json filen fra den endelige løsning er vedlagt i bilag A.
-                Din package.json bør være ens med denne efter installeringen. </li>
-            <li>KOPIER linjen herunder til installering;</li>
-                </ul>
-    </ul>
+<br></br>
 
-    
-            npm install @react-navigation/bottom-tabs @react-navigation/bottom-tabs @react-navigation/native @react-navigation/stack react-native-gesture-handler react-native-safe-area-context react-native-screens react-native-vector-icons
+## Del 2 - Tab Navigator - https://reactnavigation.org/docs/tab-based-navigation
 
+I denne del skal vi bygge en tab navigator til at navigere mellem 3 tabs
 
-2. Test nu om react navigation virker ved at kopiere al koden ind i App.js fra https://reactnavigation.org/docs/tab-based-navigation/ ( Minimal example of tab-based navigation)
+1. Opret de skærme som vi skal navigere imellem i "screens" mappen:
+* HomeScreen.js
+* SettingsScreen.js
+* UserProfileScreen.js
 
-3. Opret en mappe og døb denne 'components' 
+2. Kopier koden ind fra App.js ind i hver fil - Husk at ændre `export default function App() {` til navnet på den pågændende skærm. Eks.: i HomeScreen.js ændres funktionnavnet til HomeScreen - `export default function HomeScreen() {`
 
-4. I mappen oprettes tre js-filer(komponenter), der kaldes;<br/>  `HomeScreen`, `SettingsScreen` & `DetailsScreen`
-    - Opret i hver af de tre komponenter en tekstkomponent `<Text>vilkårligt indhold</Text>`
-    - Se evt standard strukturen for filerne i bilag
-    
-5. Gå nu ind i app.js filen og importer de nyopretterede filer. 
+3. Ændre også i `<Text>`teksten til "Welcome to the <--Skærmnavn-->" så man kan se forskellen i dem.
 
-6. Når dette er sket, er du klar til at konstruere en bottomTabnavigator i App.js
-   - Opret først en `const Tab` og lad denne være en instans af `createBottomTabNavigator()`
-        - HUSK: `createBottomTabNavigator()` bør automatisk blive importeret. Er dette ikke tilfældet skal metoden importeres fra `@react-navigation/bottom-tab`
-    - I App.js oprettes der i `return()`en `<NavigationContainer/>`, hvori en `<Tab.Navigator/>`oprettes. 
-        - Sidder du fast er strukturen vedlagt i bilag B.
-        - Derudover er der god hjælp i Expo's dokumentation, der kan findes på følgende link:
-          https://reactnavigation.org/docs/tab-based-navigation/
-    - Endeligt færdiggøres Tabnavigatoren ved at oprette tre `<Tab.Screen/>` i den oprettede `<Tab.Navigator/>`. 
-        - Hver enkelt `<Tab.Screen name={} component={} />` komponent har to properties; `name` & `component`. 
-            - `name`: angiver et referencenavn(det er  et vilkårligt rutenavn, f.eks. "home" ) til den komponent, som kobles på den enkelte screen. 
-            - `component`: Heri placeres den komponent, som man ønsker skal fremvises for den pågældende Tab
-                - HINT: Igen, hvis du går i stå, så ta' et kig på dokumentationen, der kan findes på det førnævnte link.
-                
-7. Start din app og brug de tre oprettede tabs til at navigere mellem de forskellige Screens. 
+4. Gå nu ind i app.js filen og importer de nyopretterede filer: `import HomeScreen...`
 
-## Del 2 - Stack Navigator
-1. Opret i `components` en ny fil, der kaldes `StackNavigator`. Derudover skal der i `components` oprettes en ny mappe, der kaldes `stackComponents`. I denne mappe, skal der oprettes to nye js-filer med vilkårlige navne.<br/>HINT: Se struktur i bilag C
+5. Når dette er sket, er du klar til at begynde med at bygge din Tab Navigator
 
-2. Opret en `const Stack` i StackNavigator.js. Denne skal være en instans af `createStackNavigator()`, der bør blive importeret automatisk.<br/>HINT: Fremgangsmåden er den samme, som da du lavede en tabnavigator i punkt 7 i del 1.
+### Tab Navigator setup
+1. Vi skal arbejde i App.js
+2. Importere føglende pakker ind til filen
+```
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+```
+3. Før `export default function App()`funktion indsætte `const Tab = createBottomTabNavigator();`. Dette funktion sørger for at navigation mellem tabs fungere.
 
-3. I `return()` skal der oprettes en komponent, `<Stack.Navigator></Stack.Navigator>`
+4. Slette alt ind i return funktion, og indsætte:
+```
+<NavigationContainer>
+    <Tab.Navigator>
+        {/* Noget kommer her, så slet mig helt i næste step */}
+    </Tab.Navigator>
+</NavigationContainer>
+```
+* Good to remember: Alt navitation i react native skal altid være i en "NavigationContainer"
 
-4. Opret nu tre `<Stack.Screen/>` i `Stack.Navigatoren`. Hver af de tre screen Komponenter indeholder igen properties i form af `name` og `component`, der har samme betydning, som tidligere beskrevet.
-
-5. Referér til `DetailsScreen` og komponenterne fra `stackcomponents` mappen  
-      
-6. StackNavigatoren er hermed lavet, hvorfor du nu skal vende tibage til App.js
-
-7. Heri importereres `Stacknavigator` i stedet for DetailScreen. Gå derefter ned til dén `<Tab.Screen/>` som refererer til `DetailsScreen`. Erstat nu referencen til `DetailsScreen` med en reference til `<StackNavigator/>.`<br>HUSK at opdatere `name` med en sigende reference betegnelse for StackNavigatoren<br/>
-        HINT: Sidder du fast eller har udfordringer, så ta' et kig på dokumentationen: https://reactnavigation.org/docs/stack-navigator/
-           
-8. Gå nu ind i `DetailsScreen` og sørg for at denne modtager `navigation` som argument
- 
-9. Dernæst skal metoden, `const navController = (navigation, route) => {}`, oprettes. Denne skal styre navigationen i Stacknavigatoren.
-   - Logikken i metoden skal kalde den prædefinerede metode `navigate` på `navigation` og tage `route` med som argument til metoden<br/>HINT: Brug dokumentationen, hvis du sidder fast:  https://reactnavigation.org/docs/navigating/<br/>Psst Psst.. Du kan også kigge i punkt 16. 
-     
-10. Opet nu to `<Button/>`, som i onPress aktiverer `navController`. <br/>
-       HUSK at rutenavnet, der tilføjes til metoden, skal passe med de rutenavne der blev angivet i de forskellige screen-komponenter.<br/>HUSK derudover at sende `navigation` med som argument.
-     
-11. Endeligt skal navigationen i de to komponenter, der er placeret i `stackComponents` laves.
-      - gå derfor ind i én af de to komponenter
-      
-12. Komponenten skal tage 'navigation' med som argument, som vist tidligere i `DetailsScreen`.
- 
-13. I `return()` oprettes to `<Button/>` - ligesom i  `DetailsScreen`.
- 
-14. Den ene `<Button/>` skal i onPress aktivere `navigation.goBack` - Dette er en tilbage-knap
- 
-15. Den anden `<Button/>` skal kalde `navigation.navigate("Rutenavnet på den anden screen i stackComponents")`
- 
-16. Nu er øvelsen færdig og du er klar til at prøve appen. Start din app og forsøg at trykke på Details, som refererer til den nyoprettede `Stacknavigator`. I denne screen kan du se to knapper, der giver dig mulighed for at navigere ind til de to screens i stackComponents-mappen.     
- 
-## Videre arbejde - Inspiration
- - Placér ikoner på alle tabs
-      - PLUS: Lav den valgte tab, så den har en anden farve end de resterende.<br/>HINT: Der er RIGTIG GOD hjælp at hente i dokumentationen nævnt i punkt 7 under konstruktionen af Tabnavigatoren
-      
-- Lav to tekststrenge til HomeScreen & DetailsScreen, som overføres til komponenternes Tekstkomponenter og fremvises.<br/>
-     HINT: Rigtig god at hjælpe i følgende link: https://stackoverflow.com/questions/60439210/how-to-pass-props-to-screen-component-with-a-tab-navigator
-     
-- Bestem placering af Headerteksten vist i Stacknavigatoren, 'center', 'left' & 'right'.<br/>HINT: God hjælp at hente i dokumentationen, der er nævnt i punkt 4 under konstruktionen af StackNavigatoren(kig efter options).
-
-## Bilag
-
-
-### Bilag A - Package.json - Fra Endelig Løsning 
-
-![img](https://user-images.githubusercontent.com/55731954/128073224-323544b0-0579-4e71-a6a9-c7ac6367a592.png)
-
-### Bilag B - Bottom Tab struktur 
-
-![img_1](https://user-images.githubusercontent.com/55731954/128073347-2d5699e3-c082-4d43-b96a-26503a07376d.png)
-
-### Bilag C - Mappestruktur med stackcomponents
-<img width="421" alt="asasdUdklip" src="https://user-images.githubusercontent.com/55731954/128073571-187b08bf-883a-4ffa-ac94-bcd2f6234f9b.PNG">
-![5ihkps](https://user-images.githubusercontent.com/55731954/128075112-08c88318-188d-485d-898f-bf5cca6c9ebd.gif)
-
-### Bilag D - Standard opbygning
+5. Nu skal vi til at definere de forskellige tabs som vores tab navigator skal indeholde. For at tilføj en tab bruger man:
+```
+<Tab.Screen name="Navnet på tab" component={DenImporteretScreen} />
+```
+&ensp; &ensp; &ensp; &ensp; Eks. med HomeScreen:
 
 ```
-import {Text, View } from 'react-native';
-import * as React from "react";
+<Tab.Screen name="Home" component={HomeScreen} />
+```
 
-//Husk at ændre navn
-export default function App() {
-    return (
-        <View>
-        </View>
-    );
+6. Blive ved og tilføj Details og Settings
+
+7. Start din app og se om det hele fungere! :-)
+
+<br></br>
+
+## Del 3 - Stack Navigator - https://reactnavigation.org/docs/stack-navigator
+
+Sluk jeres app samt jeres server før i fortsætter her. Det gør i ved at trykke på crtl + c i terminalen (control + c på Mac)
+
+1. Start med at oprette de filer som vi skal bruge:
+* I components mappen:
+    * ButtonComponents.js
+    * StackComponent.js
+* I screens/StackScreens mappen:
+    * AppDetailsScreen.js
+    * UserProfileScreen.js
+
+2. Igen, kopier basis snippet ind i hver fil, den kan du hente nederst i denne guide under [Snippets](#Snippets). Husk at tilpasse navnet på funktionen!
+
+3. Gå til din StackComponent.js hvor vi skal arbejde videre i de næste steps.
+
+4. Importere createStackNavigator:
+```
+import { createStackNavigator } from '@react-navigation/stack';
+```
+5. Lige som med tab screen skal vi indsætte `const Stack = createStackNavigator();` inden vores component funktion.
+
+6. Slette alt i `return` og tilføj:
+```
+<Stack.Navigator initialRouteName="Details Screen">
+    <Stack.Screen name="Details Screen" component={DetailsScreen} />
+    <Stack.Screen name="User Profile" component={UserProfileScreen} />
+    <Stack.Screen name="App Details" component={AppDetailsScreen} />
+</Stack.Navigator>
+```
+&ensp; &ensp; &ensp; &ensp; Og så tænker du: "Hvorfor er der så ikke en NavigationContainer her???" Se næste step:
+
+7. Tilbage i din App.js fil ind i din Tab navigator, erstat din DetailScreen component med StackComponent. Sådan skal det se ud: `<Tab.Screen name="Details" component={StackNavigation} />`. Fordi vi indsætter vores Stack Navigator ind i vores Tab Navigator, er den ind i en Navigation Container!
+
+### Button Component
+Næste step i Stack Navigation er at får navigationen til at fungere, men til det, skal vi have nogle knapper. Fordi vi ønsker at genbrug knap-designet flere gang, laver vi en component. Så gå til ButtonComponent.js for at lave den.
+
+8. Vi skal have nogle props, så vi kan gøre knappens tekst og funktionalitet variabel. Derfor insæt `{ title, onPress }` i din componentets funktion, sådan at den ser sådan ud: `export default function ButtonComponent({ title, onPress }){...`
+
+9. Erstat alt i `return` med:
+```
+<Pressable style={styles.button} onPress={onPress}>
+    <Text style={styles.text}>{title}</Text>
+</Pressable>
+```
+10. I din styles sektion, fjern container style og tilføj styling til button og text:
+```
+button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 50,
+    elevation: 3,
+    backgroundColor: 'green',
+    margin: 20,
+    },
+text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'white',
+    },
+```
+
+11. Så er din button component klar, og vi fortsætter udvikling på Stack Navigator.
+
+### Stack Navigator Continued... ┬─┬﻿ ︵ /(.□. \）
+
+12. I din DetailsScreen.js, tilføj nedenstående snippet før din DetailScreen funktion. Snippet definerer navigationsfunktionen
+```
+const navController = (navigation, route) =>{
+    navigation.navigate(route)
 }
 ```
-### fejl og løsninger 
 
-løsninger til double views
+13. Ind i DetailScreen funktion, indsæt `{navigation}` i mellem parenteses.
+
+14. Slet `<Text> Welcome...</Text>` 
+
+15. Importere din ButtonComponent og indsæt koden ind i `<View>`hvor jeres text lå hen.
+```
+ <ButtonComponent onPress ={()=>navController(navigation,'User Profile')} title="User Profile"/>
+        <ButtonComponent onPress ={()=>navController(navigation,'App Details')} title="App Details"/>
+``` 
+
+16. Ind i container style for henholdsvis AppDetails.js screen og UserProfileScreen.js indsætte:
+
+```
+    borderWidth: 10,
+    borderColor: 'red',
+
+    &
+
+    borderWidth: 10,
+    borderColor: 'yellow',
+```
+
+17. Tænd jeres app og se om i kan navigere rundt!
 
 
+### Extra / Challenge  ┬┴┬┴┤ʕ•ᴥ├┬┴┬┴
 
+18. Hvis du ønsker en knap som kan navigere tilbage, kan du anvende din Button component i AppDetailsScreen.js og UserProfilScreen.js. På dens OnPress funktion, kan i brug koden: `onPress ={()=>navigation.goBack()}`for at returnere til den forige skærm. Samt kan man søg på hvordan man kan fjerne den standart header som kommer automatisk med på hver side. [Find inspiration her!](https://reactnavigation.org/docs/headers/)
 
+19. Prøv at konfigurer jeres header med noget nyt og mere spændende! https://reactnavigation.org/docs/headers/#adjusting-header-styles
 
+20. Prøv at ændre jeres tap icons. Check exemple her: https://reactnavigation.org/docs/bottom-tab-navigator/#example 
+
+## Snippets
+### Basis Snippet
+```
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+
+export default function SomeComponent() {
+  return (
+    <View style={styles.container}>
+      <Text>Some text here!!!!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+```

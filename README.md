@@ -16,6 +16,21 @@ npx create-expo-app --template blank 02_Navitation
 3. Læs dokumentationen og Installér de dependencies som vi skal bruge:
 * https://reactnavigation.org/docs/getting-started
 
+Din `package.js` skulle gerne indeholde disse dependencies efter du har installeret det du skal bruge: 
+```javascript
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.6.1",
+    "@react-navigation/stack": "^6.4.1",
+    "expo": "~51.0.28",
+    "expo-status-bar": "~1.12.1",
+    "react": "18.2.0",
+    "react-native": "0.74.5",
+    "react-native-gesture-handler": "^2.19.0",
+    "undefined": "@expo/vector-icons/Ionicons"
+  },
+```
+*tip* du kan også kopiere overstående ind i din `package.js` og kører `npm install` efterfølgende.
+
 4. Test om det hele virker ved at kopiere dette minimal example ind i jeres App.js - https://reactnavigation.org/docs/tab-based-navigation/#minimal-example-of-tab-based-navigation. Hvis det virker, så forsæt (ﾉ^_^)ﾉ
 
 <br></br>

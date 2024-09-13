@@ -42,7 +42,7 @@ I denne del skal vi bygge en tab navigator til at navigere mellem 3 tabs
 1. Opret de skærme som vi skal navigere imellem i "screens" mappen:
 * HomeScreen.js
 * SettingsScreen.js
-* UserProfileScreen.js
+* DetailScreen.js
 
 2. Kopier koden ind fra App.js ind i hver fil - Husk at ændre `export default function App() {` til navnet på den pågændende skærm. Eks.: i HomeScreen.js ændres funktionnavnet til HomeScreen - `export default function HomeScreen() {`
 
